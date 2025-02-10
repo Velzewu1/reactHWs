@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'; 
 
-function Timer(isRunning){
+function Timer(){
     const [timeCount, setTimeCount] = useState(0);
 
     useEffect(() => {
@@ -8,7 +8,7 @@ function Timer(isRunning){
             setTimeCount(prevTimeCount => prevTimeCount + 1);
             }, 1000);
         return () => clearInterval(intervalId);
-      }, [isRunning]);
+      }, [timeCount]);
 
     return (
       <>

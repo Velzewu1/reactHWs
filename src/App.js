@@ -49,7 +49,7 @@ function App() {
 
       <button onClick={handleTimer}>Toggle timer</button>
 
-      {isTimer && <Timer isRunning={isTimer} />}
+      {isTimer && <Timer />}
     </>
   );
 }
