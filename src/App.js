@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Counter from './components/Counter' 
 import UserInfo from './components/UserInfo' 
 import Timer from './components/Timer' 
+import DataFetcher from './components/DataFetcher' 
 
 function App() {
   const [clickCount, setclickCount] = useState(0);
@@ -50,6 +51,10 @@ function App() {
       <button onClick={handleTimer}>Toggle timer</button>
 
       {isTimer && <Timer />}
+
+      <hr />
+
+      <DataFetcher/>
     </>
   );
 }
