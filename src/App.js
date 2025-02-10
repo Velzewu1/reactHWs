@@ -28,8 +28,6 @@ function App() {
     return setIsTimer(prevState => !prevState);
   }
 
-  
-
   return (
     <>
       <Counter onClick={handleClick}/>
