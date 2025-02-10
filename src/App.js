@@ -2,12 +2,15 @@ import './App.css';
 import { useState } from 'react';
 import Counter from './components/Counter' 
 import UserInfo from './components/UserInfo' 
+import Timer from './components/Timer' 
 
 function App() {
   const [clickCount, setclickCount] = useState(0);
 
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
+
+  const [isTimer, setIsTimer] = useState(false);
 
   function handleClick(){
     return setclickCount(clickCount + 1);
@@ -19,6 +22,12 @@ function App() {
   function handleAge(event){
     return setAge(event.target.value);
   }
+
+  function handleTimer(){
+    return setIsTimer(prevState => !prevState);
+  }
+
+  
 
   return (
     <>
@@ -35,6 +44,12 @@ function App() {
       </form>
 
       <UserInfo name={name} age={age}></UserInfo>
+
+      <hr/>
+
+      <button onClick={handleTimer}>Toggle timer</button>
+
+      {isTimer && <Timer isRunning={isTimer} />}
     </>
   );
 }
