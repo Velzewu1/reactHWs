@@ -1,0 +1,71 @@
+.movies-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  gap: 30px;
+  background: #fdfdfd;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  background: linear-gradient(145deg, #ffffff, #f7f7f7);
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.remove-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+.clear-all {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.clear-all:hover {
+  background-color: #d35400;
+  transform: scale(1.05);
+}
+
+/* Анимация удаления карточки */
+.movie-card.removed {
+  opacity: 0;
+  transform: translateX(-50px);
+}

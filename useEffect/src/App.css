@@ -1,0 +1,79 @@
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Контейнер для товаров */
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+/* Карточки товаров */
+.card {
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #333, #444);
+  color: white;
+  width: 270px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Название продукта */
+.product-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+/* Цена */
+.product-price {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #dddddd;
+  margin-bottom: 20px;
+}
+
+/* Кнопка */
+.card button {
+  border-radius: 10px;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: inherit;
+  background: linear-gradient(135deg, #4caf50, #3e8e41);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(72, 239, 128, 0.3);
+}
+
+.card button:hover {
+  background: linear-gradient(135deg, #3e8e41, #2e7031);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .products-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
